@@ -11,8 +11,8 @@ import SocialProof from './components/sections/SocialProof';
 import FinalCta from './components/sections/FinalCta';
 import Footer from './components/layout/Footer';
 
-const HERO_FORMSPREE_ID = 'xyzgvqkl';
-const CTA_FORMSPREE_ID = 'mwpevqkl';
+const HERO_FORMSPREE_ID = 'xojnqboa';
+const CTA_FORMSPREE_ID = 'mgoleqje';
 const base = import.meta.env.BASE_URL;
 
 function ParallaxImage({ src, alt, height }: { src: string; alt: string; height: string }) {
