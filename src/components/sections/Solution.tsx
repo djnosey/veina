@@ -21,7 +21,7 @@ export default function Solution() {
   return (
     <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <img
-        src="/images/buildings-facade.jpg"
+        src={`${import.meta.env.BASE_URL}images/buildings-facade.jpg`}
         alt=""
         className="absolute inset-0 w-full h-full object-cover"
         aria-hidden="true"

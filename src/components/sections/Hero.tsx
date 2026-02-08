@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section className="relative pt-32 pb-20 overflow-hidden">
       <img
-        src="/images/hero-aerial.jpg"
+        src={`${import.meta.env.BASE_URL}images/hero-aerial.jpg`}
         alt=""
         className="absolute inset-0 w-full h-full object-cover"
         aria-hidden="true"
