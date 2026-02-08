@@ -13,7 +13,7 @@ export default function StepCard({ stepNumber, icon, titleKey, descriptionKey }:
 
   return (
     <div className="text-center p-8">
-      <div className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mx-auto">
+      <div className="bg-primary text-white w-11 h-11 rounded-full flex items-center justify-center font-bold mx-auto">
         {stepNumber}
       </div>
       <div className="text-dark mt-4 flex justify-center">{icon}</div>

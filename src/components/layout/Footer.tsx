@@ -27,7 +27,7 @@ export default function Footer() {
             </h3>
             <a
               href="mailto:hola@veina.app"
-              className="text-sm hover:text-primary transition-colors duration-150"
+              className="text-sm hover:text-primary transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary"
             >
               hola@veina.app
             </a>
@@ -41,7 +41,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#"
-                  className="hover:text-primary transition-colors duration-150"
+                  className="hover:text-primary transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary"
                 >
                   {t('footer.privacy')}
                 </a>
@@ -49,7 +49,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#"
-                  className="hover:text-primary transition-colors duration-150"
+                  className="hover:text-primary transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary"
                 >
                   {t('footer.terms')}
                 </a>
@@ -67,7 +67,7 @@ export default function Footer() {
                   key={label}
                   href={href}
                   aria-label={label}
-                  className="text-gray-500 hover:text-primary transition-colors duration-150"
+                  className="text-gray-500 hover:text-primary transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary"
                 >
                   <Icon className="w-5 h-5" />
                 </a>

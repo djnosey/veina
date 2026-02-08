@@ -31,7 +31,7 @@ export default function SocialProof() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {TESTIMONIAL_KEYS.map((key, index) => (
             <ScrollReveal key={key} delay={index * 0.1}>
               <div className="bg-gray-100 rounded-2xl p-8 flex flex-col h-full">

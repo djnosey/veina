@@ -44,7 +44,7 @@ export default function Navbar() {
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-dark-light hover:text-white transition-colors md:hidden"
+          className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-dark-light hover:text-white transition-colors md:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary"
           onClick={() => setMobileOpen((prev) => !prev)}
           aria-expanded={mobileOpen}
           aria-label="Toggle navigation menu"
