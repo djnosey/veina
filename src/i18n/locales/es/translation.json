@@ -1,0 +1,146 @@
+{
+  "navbar": {
+    "cta": "Unirse a la lista"
+  },
+  "hero": {
+    "headline": "Tu comunidad, transparente y sin sorpresas",
+    "headlineHighlight": "Tu comunidad,",
+    "headlineRest": "transparente y sin sorpresas",
+    "subheadline": "Veina es la plataforma digital que ayuda a las comunidades de vecinos de Barcelona a gestionar cuotas, decisiones y proveedores — sin dramas ni comisiones ocultas.",
+    "emailPlaceholder": "Tu email",
+    "cta": "Quiero acceso",
+    "successMessage": "¡Estás dentro! Te avisaremos pronto.",
+    "errorMessage": "Algo salió mal. Inténtalo de nuevo.",
+    "shareText": "Acabo de apuntarme a Veina, la nueva plataforma para comunidades de vecinos en Barcelona. ¡Apúntate tú también!",
+    "shareWhatsApp": "Compartir por WhatsApp"
+  },
+  "problems": {
+    "sectionTag": "¿Esto te suena?",
+    "headline": "Gestionar tu comunidad no debería ser tan difícil",
+    "subheadline": "Los mismos problemas se repiten en miles de comunidades de Barcelona. Tú no deberías tener que seguir sufriéndolos.",
+    "arrears": {
+      "title": "8.400 € de media en cuotas impagadas por edificio",
+      "description": "Los vecinos dejan de pagar y no pasa nada. No hay seguimiento, ni recordatorios, ni escalado. El presidente persigue puerta por puerta mientras la deuda crece en silencio.",
+      "solution": "Veina automatiza el seguimiento y los recordatorios de pago"
+    },
+    "opacity": {
+      "title": "No tienes ni idea de a dónde va tu dinero",
+      "description": "Pagas 150 €/mes pero no puedes ver un desglose real. El administrador envía un PDF al año que genera más preguntas que respuestas. La confianza se erosiona.",
+      "solution": "Veina muestra cada euro en tiempo real"
+    },
+    "meetings": {
+      "title": "Juntas de 3 horas, cero decisiones",
+      "description": "Los mismos 8 discuten mientras 40 ni aparecen. Las decisiones se bloquean durante meses. Los ausentes no tienen voz ni registro de lo que pasó.",
+      "solution": "Veina permite votar digitalmente desde el móvil"
+    },
+    "vendors": {
+      "title": "Estás pagando un 20-40 % de más en reparaciones",
+      "description": "Tu administrador elige al proveedor y se lleva una comisión que nunca ves. Sin presupuestos competitivos, sin transparencia en precios. Una obra de fontanería no debería costar 3.000 €.",
+      "solution": "Veina te permite comparar presupuestos verificados directamente"
+    }
+  },
+  "solution": {
+    "sectionTag": "La solución",
+    "headline": "Gestión de comunidad, reinventada",
+    "subheadline": "Tres pilares para que tu comunidad funcione como debería.",
+    "transparency": {
+      "title": "Transparencia total",
+      "description": "Cada euro registrado, cada gasto visible. Cualquier vecino puede consultar las cuentas en tiempo real."
+    },
+    "decisions": {
+      "title": "Decisiones sin drama",
+      "description": "Votaciones digitales, comunicación clara y actas automáticas. Sin reuniones de 3 horas."
+    },
+    "vendors": {
+      "title": "Proveedores sin comisiones",
+      "description": "Compara presupuestos reales de proveedores verificados. Sin intermediarios que encarezcan el precio."
+    }
+  },
+  "howItWorks": {
+    "sectionTag": "Cómo funciona",
+    "headline": "Empieza en 3 minutos",
+    "subheadline": "Configurar tu comunidad en Veina es más fácil que convocar una junta.",
+    "register": {
+      "title": "Registra tu comunidad",
+      "description": "Introduce los datos básicos de tu edificio y crea el perfil de tu comunidad."
+    },
+    "invite": {
+      "title": "Invita a tus vecinos",
+      "description": "Comparte un enlace por WhatsApp. Cada vecino se une con su móvil en 30 segundos."
+    },
+    "manage": {
+      "title": "Gestiona desde el móvil",
+      "description": "Cuotas, votaciones, incidencias y proveedores. Todo en tu bolsillo."
+    }
+  },
+  "whoItsFor": {
+    "sectionTag": "¿Para quién es?",
+    "headline": "Diseñado para los que viven la comunidad",
+    "subheadline": "Ya seas presidente o propietario, Veina te simplifica la vida.",
+    "president": {
+      "title": "Presidentes",
+      "description": "Deja de perseguir vecinos y administradores. Toma el control.",
+      "bullet1": "Seguimiento automático de cuotas y morosos",
+      "bullet2": "Votaciones digitales sin juntas interminables",
+      "bullet3": "Comparador de proveedores sin comisiones"
+    },
+    "owner": {
+      "title": "Propietarios",
+      "description": "Sabe a dónde va cada euro. Participa sin tener que ir a reuniones.",
+      "bullet1": "Cuentas claras y accesibles en tiempo real",
+      "bullet2": "Vota desde el móvil en menos de un minuto",
+      "bullet3": "Recibe notificaciones de lo que importa"
+    }
+  },
+  "socialProof": {
+    "headline": "Hecho en Barcelona, para Barcelona",
+    "subheadline": "Conocemos los problemas de las comunidades de vecinos porque los hemos vivido.",
+    "stat": "396.000+",
+    "statDescription": "viviendas en comunidades de propietarios en Barcelona",
+    "testimonial1": {
+      "quote": "Llevo 3 años como presidenta y nadie me había ofrecido una herramienta así. La necesitamos ya.",
+      "name": "María L.",
+      "role": "Presidenta, Eixample"
+    },
+    "testimonial2": {
+      "quote": "No tengo ni idea de en qué se gasta la comunidad. Si Veina me lo muestra claro, me apunto.",
+      "name": "Jordi P.",
+      "role": "Propietario, Gràcia"
+    },
+    "testimonial3": {
+      "quote": "Las juntas son un desastre. Si puedo votar desde el móvil, me ahorro las discusiones.",
+      "name": "Ana R.",
+      "role": "Propietaria, Sant Martí"
+    }
+  },
+  "finalCta": {
+    "headline": "Sé de los primeros en probar Veina",
+    "subheadline": "Déjanos tus datos y te avisaremos cuando lancemos. Sin spam, lo prometemos.",
+    "urgency": "Primeros 100 accesos",
+    "nameLabel": "Nombre",
+    "namePlaceholder": "Tu nombre",
+    "emailLabel": "Email",
+    "emailPlaceholder": "tu@email.com",
+    "roleLabel": "Tu rol",
+    "rolePresident": "Presidente/a",
+    "roleOwner": "Propietario/a",
+    "roleAdmin": "Administrador/a",
+    "sizeLabel": "Viviendas en tu edificio",
+    "neighborhoodLabel": "Barrio (opcional)",
+    "neighborhoodPlaceholder": "Ej: Eixample, Gràcia, Poblenou…",
+    "painLabel": "Tu mayor dolor de cabeza (opcional)",
+    "painPlaceholder": "¿Qué es lo que más te frustra de la gestión de tu comunidad?",
+    "submitButton": "Quiero acceso anticipado",
+    "submitting": "Enviando…",
+    "successMessage": "¡Hecho! Te hemos apuntado. Te escribiremos pronto.",
+    "shareText": "Acabo de registrarme en Veina, la plataforma para gestionar comunidades de vecinos en Barcelona. ¡Apúntate tú también!"
+  },
+  "footer": {
+    "tagline": "La plataforma digital para comunidades de vecinos en Barcelona.",
+    "contactTitle": "Contacto",
+    "legalTitle": "Legal",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "socialTitle": "Síguenos"
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "navbar": {
+    "cta": "Join waitlist"
+  },
+  "hero": {
+    "headline": "Your community, transparent and surprise-free",
+    "headlineHighlight": "Your community,",
+    "headlineRest": "transparent and surprise-free",
+    "subheadline": "Veina is the digital platform that helps Barcelona homeowner communities manage fees, decisions, and vendors — drama-free and with zero hidden commissions.",
+    "emailPlaceholder": "Your email",
+    "cta": "Get early access",
+    "successMessage": "You're in! We'll be in touch soon.",
+    "errorMessage": "Something went wrong. Please try again.",
+    "shareText": "I just signed up for Veina, the new platform for homeowner communities in Barcelona. Join me!",
+    "shareWhatsApp": "Share on WhatsApp"
+  },
+  "problems": {
+    "sectionTag": "Sound familiar?",
+    "headline": "Managing your community shouldn't be this hard",
+    "subheadline": "The same problems repeat across thousands of Barcelona communities. You shouldn't have to keep dealing with them.",
+    "arrears": {
+      "title": "€8,400 average unpaid fees per building",
+      "description": "Neighbors stop paying and nothing happens. There's no tracking, no reminders, no escalation. The president chases people door to door while debt compounds quietly.",
+      "solution": "Veina automates payment tracking and reminders"
+    },
+    "opacity": {
+      "title": "You have no idea where your money goes",
+      "description": "You pay €150/month but can't see a real breakdown. The administrator sends a PDF once a year that raises more questions than it answers. Trust erodes.",
+      "solution": "Veina shows every euro in real time"
+    },
+    "meetings": {
+      "title": "3-hour meetings, zero decisions",
+      "description": "The same 8 people argue while 40 others never show up. Decisions stall for months. Those absent have no voice and no record of what happened.",
+      "solution": "Veina enables digital voting from your phone"
+    },
+    "vendors": {
+      "title": "You're overpaying by 20-40% on repairs",
+      "description": "Your administrator picks the vendor and takes a cut you never see. No competitive quotes, no transparency on pricing. One plumbing job shouldn't cost €3,000.",
+      "solution": "Veina lets you compare verified quotes directly"
+    }
+  },
+  "solution": {
+    "sectionTag": "The solution",
+    "headline": "Community management, reinvented",
+    "subheadline": "Three pillars to make your community work the way it should.",
+    "transparency": {
+      "title": "Total transparency",
+      "description": "Every euro tracked, every expense visible. Any neighbor can check the accounts in real time."
+    },
+    "decisions": {
+      "title": "Drama-free decisions",
+      "description": "Digital voting, clear communication, and automatic minutes. No more 3-hour meetings."
+    },
+    "vendors": {
+      "title": "Commission-free vendors",
+      "description": "Compare real quotes from verified vendors. No middlemen inflating the price."
+    }
+  },
+  "howItWorks": {
+    "sectionTag": "How it works",
+    "headline": "Get started in 3 minutes",
+    "subheadline": "Setting up your community on Veina is easier than scheduling a meeting.",
+    "register": {
+      "title": "Register your community",
+      "description": "Enter your building's basic info and create your community profile."
+    },
+    "invite": {
+      "title": "Invite your neighbors",
+      "description": "Share a link via WhatsApp. Each neighbor joins from their phone in 30 seconds."
+    },
+    "manage": {
+      "title": "Manage from your phone",
+      "description": "Fees, voting, incidents, and vendors. Everything in your pocket."
+    }
+  },
+  "whoItsFor": {
+    "sectionTag": "Who is it for?",
+    "headline": "Designed for those who live the community",
+    "subheadline": "Whether you're a president or an owner, Veina simplifies your life.",
+    "president": {
+      "title": "Presidents",
+      "description": "Stop chasing neighbors and administrators. Take control.",
+      "bullet1": "Automatic tracking of fees and arrears",
+      "bullet2": "Digital voting without endless meetings",
+      "bullet3": "Vendor comparison with zero commissions"
+    },
+    "owner": {
+      "title": "Owners",
+      "description": "Know where every euro goes. Participate without attending meetings.",
+      "bullet1": "Clear, real-time access to accounts",
+      "bullet2": "Vote from your phone in under a minute",
+      "bullet3": "Get notified about what matters"
+    }
+  },
+  "socialProof": {
+    "headline": "Built in Barcelona, for Barcelona",
+    "subheadline": "We know the problems of homeowner communities because we've lived them.",
+    "stat": "396,000+",
+    "statDescription": "homes in homeowner communities in Barcelona",
+    "testimonial1": {
+      "quote": "I've been president for 3 years and nobody had offered me a tool like this. We need it now.",
+      "name": "María L.",
+      "role": "President, Eixample"
+    },
+    "testimonial2": {
+      "quote": "I have no idea where the community money goes. If Veina shows it clearly, I'm in.",
+      "name": "Jordi P.",
+      "role": "Owner, Gràcia"
+    },
+    "testimonial3": {
+      "quote": "Meetings are a disaster. If I can vote from my phone, I'll skip the arguments.",
+      "name": "Ana R.",
+      "role": "Owner, Sant Martí"
+    }
+  },
+  "finalCta": {
+    "headline": "Be among the first to try Veina",
+    "subheadline": "Leave us your details and we'll let you know when we launch. No spam, we promise.",
+    "urgency": "First 100 spots",
+    "nameLabel": "Name",
+    "namePlaceholder": "Your name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "you@email.com",
+    "roleLabel": "Your role",
+    "rolePresident": "President",
+    "roleOwner": "Owner",
+    "roleAdmin": "Administrator",
+    "sizeLabel": "Units in your building",
+    "neighborhoodLabel": "Neighborhood (optional)",
+    "neighborhoodPlaceholder": "E.g.: Eixample, Gràcia, Poblenou…",
+    "painLabel": "Your biggest headache (optional)",
+    "painPlaceholder": "What frustrates you the most about managing your community?",
+    "submitButton": "Get early access",
+    "submitting": "Sending…",
+    "successMessage": "Done! You're on the list. We'll be in touch soon.",
+    "shareText": "I just signed up for Veina, the platform for managing homeowner communities in Barcelona. Join me!"
+  },
+  "footer": {
+    "tagline": "The digital platform for homeowner communities in Barcelona.",
+    "contactTitle": "Contact",
+    "legalTitle": "Legal",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "socialTitle": "Follow us"
+  }
+}

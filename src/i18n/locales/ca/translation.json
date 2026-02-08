@@ -1,0 +1,146 @@
+{
+  "navbar": {
+    "cta": "Unir-se a la llista"
+  },
+  "hero": {
+    "headline": "La teva comunitat, transparent i sense sorpreses",
+    "headlineHighlight": "La teva comunitat,",
+    "headlineRest": "transparent i sense sorpreses",
+    "subheadline": "Veina és la plataforma digital que ajuda les comunitats de veïns de Barcelona a gestionar quotes, decisions i proveïdors — sense drames ni comissions ocultes.",
+    "emailPlaceholder": "El teu email",
+    "cta": "Vull accés",
+    "successMessage": "Ja hi ets! T'avisarem aviat.",
+    "errorMessage": "Alguna cosa ha fallat. Torna-ho a provar.",
+    "shareText": "Acabo d'apuntar-me a Veina, la nova plataforma per a comunitats de veïns a Barcelona. Apunta't tu també!",
+    "shareWhatsApp": "Compartir per WhatsApp"
+  },
+  "problems": {
+    "sectionTag": "Això et sona?",
+    "headline": "Gestionar la teva comunitat no hauria de ser tan difícil",
+    "subheadline": "Els mateixos problemes es repeteixen en milers de comunitats de Barcelona. Tu no hauries de continuar patint-los.",
+    "arrears": {
+      "title": "8.400 € de mitjana en quotes impagades per edifici",
+      "description": "Els veïns deixen de pagar i no passa res. No hi ha seguiment, ni recordatoris, ni escalat. El president persegueix porta per porta mentre el deute creix en silenci.",
+      "solution": "Veina automatitza el seguiment i els recordatoris de pagament"
+    },
+    "opacity": {
+      "title": "No tens ni idea d'on van els teus diners",
+      "description": "Pagues 150 €/mes però no pots veure un desglossament real. L'administrador envia un PDF l'any que genera més preguntes que respostes. La confiança s'erosiona.",
+      "solution": "Veina mostra cada euro en temps real"
+    },
+    "meetings": {
+      "title": "Juntes de 3 hores, zero decisions",
+      "description": "Els mateixos 8 discuteixen mentre 40 ni apareixen. Les decisions es bloquegen durant mesos. Els absents no tenen veu ni registre del que va passar.",
+      "solution": "Veina permet votar digitalment des del mòbil"
+    },
+    "vendors": {
+      "title": "Estàs pagant un 20-40 % de més en reparacions",
+      "description": "El teu administrador tria el proveïdor i s'emporta una comissió que mai veus. Sense pressupostos competitius, sense transparència en preus. Una obra de fontaneria no hauria de costar 3.000 €.",
+      "solution": "Veina et permet comparar pressupostos verificats directament"
+    }
+  },
+  "solution": {
+    "sectionTag": "La solució",
+    "headline": "Gestió de comunitat, reinventada",
+    "subheadline": "Tres pilars perquè la teva comunitat funcioni com hauria.",
+    "transparency": {
+      "title": "Transparència total",
+      "description": "Cada euro registrat, cada despesa visible. Qualsevol veí pot consultar els comptes en temps real."
+    },
+    "decisions": {
+      "title": "Decisions sense drama",
+      "description": "Votacions digitals, comunicació clara i actes automàtiques. Sense reunions de 3 hores."
+    },
+    "vendors": {
+      "title": "Proveïdors sense comissions",
+      "description": "Compara pressupostos reals de proveïdors verificats. Sense intermediaris que encareixin el preu."
+    }
+  },
+  "howItWorks": {
+    "sectionTag": "Com funciona",
+    "headline": "Comença en 3 minuts",
+    "subheadline": "Configurar la teva comunitat a Veina és més fàcil que convocar una junta.",
+    "register": {
+      "title": "Registra la teva comunitat",
+      "description": "Introdueix les dades bàsiques del teu edifici i crea el perfil de la teva comunitat."
+    },
+    "invite": {
+      "title": "Convida els teus veïns",
+      "description": "Comparteix un enllaç per WhatsApp. Cada veí s'uneix amb el seu mòbil en 30 segons."
+    },
+    "manage": {
+      "title": "Gestiona des del mòbil",
+      "description": "Quotes, votacions, incidències i proveïdors. Tot a la teva butxaca."
+    }
+  },
+  "whoItsFor": {
+    "sectionTag": "Per a qui és?",
+    "headline": "Dissenyat per als que viuen la comunitat",
+    "subheadline": "Tant si ets president com propietari, Veina et simplifica la vida.",
+    "president": {
+      "title": "Presidents",
+      "description": "Deixa de perseguir veïns i administradors. Pren el control.",
+      "bullet1": "Seguiment automàtic de quotes i morosos",
+      "bullet2": "Votacions digitals sense juntes interminables",
+      "bullet3": "Comparador de proveïdors sense comissions"
+    },
+    "owner": {
+      "title": "Propietaris",
+      "description": "Sap on va cada euro. Participa sense haver d'anar a reunions.",
+      "bullet1": "Comptes clars i accessibles en temps real",
+      "bullet2": "Vota des del mòbil en menys d'un minut",
+      "bullet3": "Rep notificacions del que importa"
+    }
+  },
+  "socialProof": {
+    "headline": "Fet a Barcelona, per a Barcelona",
+    "subheadline": "Coneixem els problemes de les comunitats de veïns perquè els hem viscut.",
+    "stat": "396.000+",
+    "statDescription": "habitatges en comunitats de propietaris a Barcelona",
+    "testimonial1": {
+      "quote": "Porto 3 anys com a presidenta i ningú m'havia ofert una eina així. La necessitem ja.",
+      "name": "Maria L.",
+      "role": "Presidenta, Eixample"
+    },
+    "testimonial2": {
+      "quote": "No tinc ni idea d'on es gasten els diners de la comunitat. Si Veina m'ho mostra clar, m'apunto.",
+      "name": "Jordi P.",
+      "role": "Propietari, Gràcia"
+    },
+    "testimonial3": {
+      "quote": "Les juntes són un desastre. Si puc votar des del mòbil, m'estalvio les discussions.",
+      "name": "Ana R.",
+      "role": "Propietària, Sant Martí"
+    }
+  },
+  "finalCta": {
+    "headline": "Sigues dels primers a provar Veina",
+    "subheadline": "Deixa'ns les teves dades i t'avisarem quan llancem. Sense spam, ho prometem.",
+    "urgency": "Primers 100 accessos",
+    "nameLabel": "Nom",
+    "namePlaceholder": "El teu nom",
+    "emailLabel": "Email",
+    "emailPlaceholder": "tu@email.com",
+    "roleLabel": "El teu rol",
+    "rolePresident": "President/a",
+    "roleOwner": "Propietari/ària",
+    "roleAdmin": "Administrador/a",
+    "sizeLabel": "Habitatges al teu edifici",
+    "neighborhoodLabel": "Barri (opcional)",
+    "neighborhoodPlaceholder": "Ex: Eixample, Gràcia, Poblenou…",
+    "painLabel": "El teu major mal de cap (opcional)",
+    "painPlaceholder": "Què és el que més et frustra de la gestió de la teva comunitat?",
+    "submitButton": "Vull accés anticipat",
+    "submitting": "Enviant…",
+    "successMessage": "Fet! T'hem apuntat. T'escriurem aviat.",
+    "shareText": "Acabo de registrar-me a Veina, la plataforma per gestionar comunitats de veïns a Barcelona. Apunta't tu també!"
+  },
+  "footer": {
+    "tagline": "La plataforma digital per a comunitats de veïns a Barcelona.",
+    "contactTitle": "Contacte",
+    "legalTitle": "Legal",
+    "privacy": "Privacitat",
+    "terms": "Termes",
+    "socialTitle": "Segueix-nos"
+  }
+}
