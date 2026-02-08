@@ -21,7 +21,7 @@ export default function WhoItsFor() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <ScrollReveal delay={0}>
             <PersonaCard
               icon={<Shield className="w-10 h-10" />}

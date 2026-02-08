@@ -171,7 +171,7 @@ export default function LeadForm({ formspreeId }: LeadFormProps) {
       </div>
 
       {status === 'error' && (
-        <p className="text-red-600 text-sm font-medium" role="alert">
+        <p className="text-accent-dark text-sm font-medium" role="alert">
           {error}
         </p>
       )}

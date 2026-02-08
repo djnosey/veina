@@ -60,7 +60,7 @@ export default function EmailForm({ formspreeId }: EmailFormProps) {
           onChange={(e) => setEmail(e.target.value)}
           placeholder={t('hero.emailPlaceholder')}
           disabled={status === 'submitting'}
-          className="flex-1 rounded-full border border-white/20 bg-dark-light px-5 py-3 text-white placeholder-gray-500 transition-colors duration-200 focus:border-primary/50 focus:outline-none focus:ring-2 focus:ring-primary/25 disabled:opacity-50"
+          className="flex-1 rounded-full border border-gray-300 bg-white px-5 py-3 text-dark placeholder-gray-400 transition-colors duration-200 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/25 disabled:opacity-50"
         />
         <motion.button
           whileHover={{ scale: 1.03 }}

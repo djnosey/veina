@@ -39,10 +39,10 @@ export default function PersonaCard({
   const styles = accentStyles[accent];
 
   return (
-    <div className={`bg-white rounded-2xl p-8 border-t-4 ${styles.border}`}>
+    <div className={`bg-white rounded-2xl p-8 border-t-4 h-full flex flex-col ${styles.border}`}>
       <div className={`${styles.iconBg} rounded-xl p-4 w-fit mx-auto`}>{icon}</div>
       <h3 className="font-display font-bold text-xl mt-6 text-center text-dark">{t(titleKey)}</h3>
-      <p className="text-gray-500 mt-3 text-center">{t(descriptionKey)}</p>
+      <p className="text-gray-500 mt-3 text-center flex-1">{t(descriptionKey)}</p>
       <ul className="mt-6 space-y-3">
         {bulletKeys.map((bulletKey) => (
           <li key={bulletKey} className="flex items-start gap-3">
