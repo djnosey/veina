@@ -31,7 +31,8 @@ export default function Navbar() {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 bg-dark transition-shadow duration-300 ${scrolled ? 'shadow-lg shadow-black/20' : ''}`}>
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        <a href="#" className="text-2xl font-display font-bold text-white">
+        <a href="#" className="flex items-center gap-2 text-2xl font-display font-bold text-white">
+          <img src={`${import.meta.env.BASE_URL}logo-white.svg`} alt="" className="h-7 w-7" aria-hidden="true" />
           Veina
         </a>
 
