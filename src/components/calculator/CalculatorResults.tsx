@@ -227,7 +227,7 @@ export default function CalculatorResults({ inputs, formspreeId, onRecalculate }
 
   return (
     <>
-      {/* Dark hero: results summary + Veina pitch */}
+      {/* Section 1 — Dark hero: big headline + comparison summary */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <img
           src={`${import.meta.env.BASE_URL}images/city-aerial.jpg`}
@@ -235,69 +235,72 @@ export default function CalculatorResults({ inputs, formspreeId, onRecalculate }
           className="absolute inset-0 w-full h-full object-cover"
           aria-hidden="true"
         />
-        <div className="absolute inset-0 bg-dark/90" />
+        <div className="absolute inset-0 bg-dark/80 hero-grid" />
 
         <div className="relative max-w-5xl mx-auto">
-          {/* Results headline + summary stats */}
           <ScrollReveal>
-            <div className="text-center mb-10">
-              <span className="inline-block bg-primary/15 text-primary text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
+            <div className="text-center mb-12">
+              <span className="inline-block bg-primary/15 text-primary text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-6">
                 {t('calculator.sectionTag')}
               </span>
-              <h1 className="font-display text-3xl sm:text-4xl font-bold text-white tracking-tight">
+              <h1 className="max-w-4xl mx-auto font-display text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight">
                 {t('calculator.results.headline')}
               </h1>
             </div>
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <div className="max-w-xl mx-auto mb-16">
-              <div className="bg-dark-light border border-white/10 rounded-2xl p-6 md:p-8">
-                <div className="grid grid-cols-2 gap-4 mb-4">
+            <div className="max-w-2xl mx-auto">
+              <div className="bg-dark-light border border-white/10 rounded-2xl p-8 md:p-10">
+                <div className="grid grid-cols-2 gap-6 mb-6">
                   <div className="text-center">
-                    <p className="text-sm text-gray-400 mb-1">{t('calculator.results.summary.yourTotal')}</p>
-                    <p className="font-display font-extrabold text-3xl text-white">
+                    <p className="text-sm text-gray-400 mb-2">{t('calculator.results.summary.yourTotal')}</p>
+                    <p className="font-display font-extrabold text-4xl sm:text-5xl text-white">
                       {userAnnual.toLocaleString()}&nbsp;&euro;
                     </p>
-                    <p className="text-sm text-gray-400">{t('calculator.results.summary.perYear')}</p>
+                    <p className="text-sm text-gray-400 mt-1">{t('calculator.results.summary.perYear')}</p>
                   </div>
                   <div className="text-center">
-                    <p className="text-sm text-gray-400 mb-1">{t('calculator.results.summary.averageTotal')}</p>
-                    <p className="font-display font-bold text-3xl text-gray-300">
+                    <p className="text-sm text-gray-400 mb-2">{t('calculator.results.summary.averageTotal')}</p>
+                    <p className="font-display font-bold text-4xl sm:text-5xl text-gray-300">
                       {benchmarkAnnual.toLocaleString()}&nbsp;&euro;
                     </p>
-                    <p className="text-sm text-gray-400">{t('calculator.results.summary.perYear')}</p>
+                    <p className="text-sm text-gray-400 mt-1">{t('calculator.results.summary.perYear')}</p>
                   </div>
                 </div>
 
                 {isOverpaying && (
-                  <div className="flex items-center justify-center gap-3 rounded-xl bg-accent/15 border border-accent/30 p-4 mt-4">
+                  <div className="flex items-center justify-center gap-3 rounded-xl bg-accent/15 border border-accent/30 p-5 mt-6">
                     <TrendingDown className="w-6 h-6 text-accent shrink-0" />
-                    <p className="text-accent font-semibold">
+                    <p className="text-accent font-semibold text-lg">
                       {t('calculator.results.summary.saving')} <span className="font-extrabold">{Math.abs(difference).toLocaleString()}&nbsp;&euro;</span>{t('calculator.results.summary.perYear')}
                     </p>
                   </div>
                 )}
 
                 {!isOverpaying && (
-                  <div className="flex items-center justify-center gap-3 mt-4">
+                  <div className="flex items-center justify-center gap-3 mt-6">
                     <CheckCircle className="w-5 h-5 text-success shrink-0" />
-                    <p className="text-gray-300">{t('calculator.results.summary.onTrack')}</p>
+                    <p className="text-gray-300 text-lg">{t('calculator.results.summary.onTrack')}</p>
                   </div>
                 )}
               </div>
             </div>
           </ScrollReveal>
+        </div>
+      </section>
 
-          {/* Veina pitch */}
-          <ScrollReveal delay={0.2}>
+      {/* Section 2 — White: Veina pitch */}
+      <section className="bg-surface py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <ScrollReveal>
             <div className="text-center mb-14">
-              <h2 className="font-display text-2xl sm:text-3xl font-bold text-white tracking-tight">
+              <h2 className="font-display text-3xl sm:text-4xl font-bold text-dark tracking-tight">
                 {hasOverpayingCategories
                   ? t('calculator.results.pitch.headline')
                   : t('calculator.results.pitch.headlineOnTrack')}
               </h2>
-              <p className="text-gray-400 mt-4 text-lg max-w-2xl mx-auto">
+              <p className="text-gray-500 mt-4 text-lg max-w-2xl mx-auto">
                 {t('calculator.results.pitch.subheadline')}
               </p>
             </div>
@@ -305,27 +308,45 @@ export default function CalculatorResults({ inputs, formspreeId, onRecalculate }
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {PITCH_PILLARS.map(({ key, Icon }, index) => (
-              <ScrollReveal key={key} delay={index * 0.15 + 0.3} className="h-full">
+              <ScrollReveal key={key} delay={index * 0.15} className="h-full">
                 <motion.div
                   whileHover={{ y: -4 }}
                   transition={{ type: 'spring', stiffness: 400, damping: 17 }}
-                  className="bg-dark-light border border-white/10 rounded-2xl p-8 hover:border-primary/30 transition-colors duration-300 h-full"
+                  className="bg-white border border-gray-200 rounded-2xl p-8 hover:border-primary/40 hover:shadow-lg transition-all duration-300 h-full"
                 >
                   <div className="bg-primary/15 text-primary rounded-xl p-3 w-fit">
                     <Icon className="w-6 h-6" />
                   </div>
-                  <p className="font-display font-bold text-lg mt-5 text-white">
+                  <p className="font-display font-bold text-lg mt-5 text-dark">
                     {t(`calculator.results.pitch.${key}.title`)}
                   </p>
-                  <p className="text-gray-400 text-base mt-2">
+                  <p className="text-gray-500 text-base mt-2">
                     {t(`calculator.results.pitch.${key}.description`)}
                   </p>
                 </motion.div>
               </ScrollReveal>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div className="text-center mt-10">
+      {/* Section 3 — Dark: see how it works */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <img
+          src={`${import.meta.env.BASE_URL}images/buildings-facade.jpg`}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+          aria-hidden="true"
+        />
+        <div className="absolute inset-0 bg-dark/90" />
+        <div className="relative max-w-3xl mx-auto text-center">
+          <ScrollReveal>
+            <h2 className="font-display text-2xl sm:text-3xl font-bold text-white tracking-tight mb-4">
+              {t('howItWorks.headline')}
+            </h2>
+            <p className="text-gray-400 text-lg max-w-xl mx-auto mb-8">
+              {t('howItWorks.subheadline')}
+            </p>
             <motion.div
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
@@ -334,17 +355,17 @@ export default function CalculatorResults({ inputs, formspreeId, onRecalculate }
             >
               <Link
                 to="/"
-                className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 font-bold text-white transition-all duration-200 hover:bg-accent-light glow-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 min-h-[44px]"
+                className="inline-flex items-center gap-2 rounded-full bg-accent px-8 py-4 font-bold text-white text-lg transition-all duration-200 hover:bg-accent-light glow-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 min-h-[44px]"
               >
                 {t('calculator.results.pitch.learnMore')}
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-5 h-5" />
               </Link>
             </motion.div>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 
-      {/* Category breakdown (light section) */}
+      {/* Section 4 — White: breakdown by category */}
       <section className="bg-surface py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <ScrollReveal>
@@ -366,7 +387,7 @@ export default function CalculatorResults({ inputs, formspreeId, onRecalculate }
       {/* Parallax image breather */}
       <ParallaxBreather />
 
-      {/* CTA section (dark, FinalCta style) */}
+      {/* Section 5 — Dark CTA: email collection */}
       <section className="bg-dark hero-grid py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto">
           <ScrollReveal>
