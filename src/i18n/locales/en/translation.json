@@ -197,7 +197,8 @@
         "button": "Share with your community",
         "text": "I just compared my community's costs to the Barcelona average with this Veina calculator. Try it yourself!"
       },
-      "recalculate": "Recalculate"
+      "recalculate": "Recalculate",
+      "disclaimer": "Averages are based on market research for typical Barcelona buildings (~20 units with elevator). Actual costs vary by building."
     }
   },
   "footer": {

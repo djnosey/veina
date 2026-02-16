@@ -274,6 +274,8 @@ export default function CalculatorResults({ inputs, formspreeId, onRecalculate }
         ))}
       </div>
 
+      <p className="text-xs text-gray-400 text-center">{t('calculator.results.disclaimer')}</p>
+
       <SummaryCard comparisons={comparisons} inputs={inputs} />
 
       {/* Lead capture */}

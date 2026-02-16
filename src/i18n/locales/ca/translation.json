@@ -197,7 +197,8 @@
         "button": "Comparteix amb la teva comunitat",
         "text": "Acabo de comparar les despeses de la meva comunitat amb la mitjana de Barcelona amb aquesta calculadora de Veina. Prova-la tu tamb\u00e9!"
       },
-      "recalculate": "Tornar a calcular"
+      "recalculate": "Tornar a calcular",
+      "disclaimer": "Les mitjanes es basen en estudis de mercat d'edificis típics de Barcelona (~20 habitatges amb ascensor). Els costos reals varien segons l'edifici."
     }
   },
   "footer": {

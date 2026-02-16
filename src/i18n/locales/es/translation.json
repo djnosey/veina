@@ -197,7 +197,8 @@
         "button": "Comparte con tu comunidad",
         "text": "Acabo de comparar los gastos de mi comunidad con la media de Barcelona con esta calculadora de Veina. ¡Pruébala tú también!"
       },
-      "recalculate": "Volver a calcular"
+      "recalculate": "Volver a calcular",
+      "disclaimer": "Las medias se basan en estudios de mercado de edificios típicos de Barcelona (~20 viviendas con ascensor). Los costes reales varían según el edificio."
     }
   },
   "footer": {
