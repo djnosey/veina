@@ -3,10 +3,10 @@
     "cta": "Join waitlist"
   },
   "hero": {
-    "headline": "Your community, transparent and surprise-free",
-    "headlineHighlight": "Your community,",
-    "headlineRest": "transparent and surprise-free",
-    "subheadline": "Veina is the digital platform that helps Barcelona homeowner communities manage fees, decisions, and vendors — drama-free and with zero hidden commissions.",
+    "headline": "You choose the vendors. We manage everything else.",
+    "headlineHighlight": "You choose the vendors.",
+    "headlineRest": "We manage everything else.",
+    "subheadline": "Veina is the digital administrator for homeowner communities in Barcelona. Competitive quotes for every job, real-time transparent accounts, and full management covered — with zero hidden commissions.",
     "emailPlaceholder": "Your email",
     "cta": "Get early access",
     "successMessage": "You're in! We'll be in touch soon.",
@@ -34,43 +34,43 @@
       "solution": "Veina enables digital voting from your phone"
     },
     "vendors": {
-      "title": "You're overpaying by 20-40% on repairs",
-      "description": "Your administrator picks the vendor and takes a cut you never see. No competitive quotes, no transparency on pricing. One plumbing job shouldn't cost €3,000.",
-      "solution": "Veina lets you compare verified quotes directly"
+      "title": "Your admin picks the vendor. You just pay the bill.",
+      "description": "No competitive quotes, no alternatives, no way to know if the price is fair. Your admin uses the same people every time — and sometimes takes a cut. Stairwell cleaning shouldn't cost double what the building next door pays.",
+      "solution": "With Veina, you see 3 quotes for every job and you choose"
     }
   },
   "solution": {
-    "sectionTag": "The solution",
-    "headline": "Community management, reinvented",
-    "subheadline": "Three pillars to make your community work the way it should.",
+    "sectionTag": "Your new administrator",
+    "headline": "Everything your admin does. Plus what they never did.",
+    "subheadline": "Veina covers all your community's administration — and gives you the control you should have always had.",
     "transparency": {
-      "title": "Total transparency",
-      "description": "Every euro tracked, every expense visible. Any neighbor can check the accounts in real time."
+      "title": "Real-time accounts",
+      "description": "Every euro tracked, every expense visible. No waiting for the year-end PDF — any neighbor checks the accounts whenever they want."
     },
     "decisions": {
       "title": "Drama-free decisions",
       "description": "Digital voting, clear communication, and automatic minutes. No more 3-hour meetings."
     },
     "vendors": {
-      "title": "Commission-free vendors",
-      "description": "Compare real quotes from verified vendors. No middlemen inflating the price."
+      "title": "You choose the vendors",
+      "description": "For every job over €500, you get 3 quotes from verified vendors with ratings from other communities. You decide, not your administrator."
     }
   },
   "howItWorks": {
     "sectionTag": "How it works",
-    "headline": "Get started in 3 minutes",
-    "subheadline": "Setting up your community on Veina is easier than scheduling a meeting.",
+    "headline": "Switch your administrator without the drama",
+    "subheadline": "We handle the transition. Your community just notices the improvement.",
     "register": {
-      "title": "Register your community",
-      "description": "Enter your building's basic info and create your community profile."
+      "title": "Tell us about your community",
+      "description": "Give us the basics about your building. We set everything up — accounts, vendors, documentation."
     },
     "invite": {
-      "title": "Invite your neighbors",
-      "description": "Share a link via WhatsApp. Each neighbor joins from their phone in 30 seconds."
+      "title": "Your neighbors connect",
+      "description": "Each neighbor gets a WhatsApp link. In 30 seconds they have access to accounts, voting, and vendors from their phone."
     },
     "manage": {
-      "title": "Manage from your phone",
-      "description": "Fees, voting, incidents, and vendors. Everything in your pocket."
+      "title": "You decide, we execute",
+      "description": "We cover the day-to-day management. When a service needs hiring, you see the options and choose."
     }
   },
   "whoItsFor": {
@@ -79,17 +79,17 @@
     "subheadline": "Whether you're a president or an owner, Veina simplifies your life.",
     "president": {
       "title": "Presidents",
-      "description": "Stop chasing neighbors and administrators. Take control.",
-      "bullet1": "Automatic tracking of fees and arrears",
-      "bullet2": "Digital voting without endless meetings",
-      "bullet3": "Vendor comparison with zero commissions"
+      "description": "Finally, an administrator that works for you — not the other way around.",
+      "bullet1": "Automatic fee collection and arrears tracking",
+      "bullet2": "3 verified quotes for every major job",
+      "bullet3": "Open accounts any neighbor can check"
     },
     "owner": {
       "title": "Owners",
-      "description": "Know where every euro goes. Participate without attending meetings.",
+      "description": "Know where every euro goes. Have a say in how it's spent.",
       "bullet1": "Clear, real-time access to accounts",
-      "bullet2": "Vote from your phone in under a minute",
-      "bullet3": "Get notified about what matters"
+      "bullet2": "See the quotes and vote on which vendor gets hired",
+      "bullet3": "Vote on decisions from your phone without attending meetings"
     }
   },
   "socialProof": {
@@ -103,7 +103,7 @@
       "role": "President, Eixample"
     },
     "testimonial2": {
-      "quote": "I have no idea where the community money goes. If Veina shows it clearly, I'm in.",
+      "quote": "We pay €180/month for cleaning and I don't even know if that's expensive. If Veina shows me what other buildings pay, I'm switching.",
       "name": "Jordi P.",
       "role": "Owner, Gràcia"
     },
@@ -136,7 +136,7 @@
     "shareText": "I just signed up for Veina, the platform for managing homeowner communities in Barcelona. Join me!"
   },
   "footer": {
-    "tagline": "The digital platform for homeowner communities in Barcelona.",
+    "tagline": "The digital administrator for homeowner communities in Barcelona.",
     "contactTitle": "Contact",
     "legalTitle": "Legal",
     "privacy": "Privacy",

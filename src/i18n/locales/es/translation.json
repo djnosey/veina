@@ -3,10 +3,10 @@
     "cta": "Unirse a la lista"
   },
   "hero": {
-    "headline": "Tu comunidad, transparente y sin sorpresas",
-    "headlineHighlight": "Tu comunidad,",
-    "headlineRest": "transparente y sin sorpresas",
-    "subheadline": "Veina es la plataforma digital que ayuda a las comunidades de vecinos de Barcelona a gestionar cuotas, decisiones y proveedores — sin dramas ni comisiones ocultas.",
+    "headline": "Tú eliges los proveedores. Nosotros gestionamos todo lo demás.",
+    "headlineHighlight": "Tú eliges los proveedores.",
+    "headlineRest": "Nosotros gestionamos todo lo demás.",
+    "subheadline": "Veina es el administrador digital para comunidades de vecinos en Barcelona. Presupuestos competitivos para cada trabajo, cuentas transparentes en tiempo real y toda la gestión cubierta — sin comisiones ocultas.",
     "emailPlaceholder": "Tu email",
     "cta": "Quiero acceso",
     "successMessage": "¡Estás dentro! Te avisaremos pronto.",
@@ -34,43 +34,43 @@
       "solution": "Veina permite votar digitalmente desde el móvil"
     },
     "vendors": {
-      "title": "Estás pagando un 20-40 % de más en reparaciones",
-      "description": "Tu administrador elige al proveedor y se lleva una comisión que nunca ves. Sin presupuestos competitivos, sin transparencia en precios. Una obra de fontanería no debería costar 3.000 €.",
-      "solution": "Veina te permite comparar presupuestos verificados directamente"
+      "title": "Tu administrador elige al proveedor. Tú solo pagas.",
+      "description": "Sin presupuestos competitivos, sin alternativas, sin saber si el precio es justo. Tu administrador usa a los de siempre — y a veces se lleva comisión. Una limpieza de escalera no debería costar el doble que en el edificio de al lado.",
+      "solution": "Con Veina, ves 3 presupuestos para cada trabajo y eliges tú"
     }
   },
   "solution": {
-    "sectionTag": "La solución",
-    "headline": "Gestión de comunidad, reinventada",
-    "subheadline": "Tres pilares para que tu comunidad funcione como debería.",
+    "sectionTag": "Tu nuevo administrador",
+    "headline": "Todo lo que hace tu gestor. Más lo que nunca hizo.",
+    "subheadline": "Veina cubre toda la administración de tu comunidad — y te da el control que siempre debiste tener.",
     "transparency": {
-      "title": "Transparencia total",
-      "description": "Cada euro registrado, cada gasto visible. Cualquier vecino puede consultar las cuentas en tiempo real."
+      "title": "Cuentas en tiempo real",
+      "description": "Cada euro registrado, cada gasto visible. No esperas al PDF de fin de año — cualquier vecino consulta las cuentas cuando quiera."
     },
     "decisions": {
       "title": "Decisiones sin drama",
       "description": "Votaciones digitales, comunicación clara y actas automáticas. Sin reuniones de 3 horas."
     },
     "vendors": {
-      "title": "Proveedores sin comisiones",
-      "description": "Compara presupuestos reales de proveedores verificados. Sin intermediarios que encarezcan el precio."
+      "title": "Tú eliges a los proveedores",
+      "description": "Para cada trabajo de más de 500 €, recibes 3 presupuestos de proveedores verificados con valoraciones de otras comunidades. Tú decides, no tu administrador."
     }
   },
   "howItWorks": {
     "sectionTag": "Cómo funciona",
-    "headline": "Empieza en 3 minutos",
-    "subheadline": "Configurar tu comunidad en Veina es más fácil que convocar una junta.",
+    "headline": "Cambia de administrador sin dramas",
+    "subheadline": "Nosotros nos encargamos de la transición. Tu comunidad solo nota la mejora.",
     "register": {
-      "title": "Registra tu comunidad",
-      "description": "Introduce los datos básicos de tu edificio y crea el perfil de tu comunidad."
+      "title": "Nos cuentas tu comunidad",
+      "description": "Nos dices lo básico sobre tu edificio. Nosotros preparamos todo — cuentas, proveedores, documentación."
     },
     "invite": {
-      "title": "Invita a tus vecinos",
-      "description": "Comparte un enlace por WhatsApp. Cada vecino se une con su móvil en 30 segundos."
+      "title": "Tus vecinos se conectan",
+      "description": "Cada vecino recibe un enlace por WhatsApp. En 30 segundos tienen acceso a cuentas, votaciones y proveedores desde el móvil."
     },
     "manage": {
-      "title": "Gestiona desde el móvil",
-      "description": "Cuotas, votaciones, incidencias y proveedores. Todo en tu bolsillo."
+      "title": "Tú decides, nosotros ejecutamos",
+      "description": "La gestión diaria la cubrimos nosotros. Cuando hay que contratar un servicio, tú ves las opciones y eliges."
     }
   },
   "whoItsFor": {
@@ -79,17 +79,17 @@
     "subheadline": "Ya seas presidente o propietario, Veina te simplifica la vida.",
     "president": {
       "title": "Presidentes",
-      "description": "Deja de perseguir vecinos y administradores. Toma el control.",
-      "bullet1": "Seguimiento automático de cuotas y morosos",
-      "bullet2": "Votaciones digitales sin juntas interminables",
-      "bullet3": "Comparador de proveedores sin comisiones"
+      "description": "Por fin un administrador que trabaja para ti, no al revés.",
+      "bullet1": "Cobro automático de cuotas y seguimiento de morosos",
+      "bullet2": "3 presupuestos verificados para cada trabajo importante",
+      "bullet3": "Cuentas abiertas que cualquier vecino puede consultar"
     },
     "owner": {
       "title": "Propietarios",
-      "description": "Sabe a dónde va cada euro. Participa sin tener que ir a reuniones.",
+      "description": "Sabes a dónde va cada euro. Decides en qué se gasta.",
       "bullet1": "Cuentas claras y accesibles en tiempo real",
-      "bullet2": "Vota desde el móvil en menos de un minuto",
-      "bullet3": "Recibe notificaciones de lo que importa"
+      "bullet2": "Ves los presupuestos y votas qué proveedor se contrata",
+      "bullet3": "Vota decisiones desde el móvil sin ir a juntas"
     }
   },
   "socialProof": {
@@ -103,7 +103,7 @@
       "role": "Presidenta, Eixample"
     },
     "testimonial2": {
-      "quote": "No tengo ni idea de en qué se gasta la comunidad. Si Veina me lo muestra claro, me apunto.",
+      "quote": "Pagamos 180 € al mes de limpieza y ni sé si es caro. Si Veina me enseña lo que pagan otros edificios, me cambio.",
       "name": "Jordi P.",
       "role": "Propietario, Gràcia"
     },
@@ -136,7 +136,7 @@
     "shareText": "Acabo de registrarme en Veina, la plataforma para gestionar comunidades de vecinos en Barcelona. ¡Apúntate tú también!"
   },
   "footer": {
-    "tagline": "La plataforma digital para comunidades de vecinos en Barcelona.",
+    "tagline": "El administrador digital para comunidades de vecinos en Barcelona.",
     "contactTitle": "Contacto",
     "legalTitle": "Legal",
     "privacy": "Privacidad",
