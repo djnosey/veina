@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import type { FormEvent } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ArrowLeft, CheckCircle, AlertCircle, Send, TrendingDown, TrendingUp } from 'lucide-react';
-import { motion, useReducedMotion } from 'motion/react';
+import { ArrowLeft, ArrowRight, AlertCircle, BadgePercent, CheckCircle, Eye, Send, Shield, TrendingDown } from 'lucide-react';
+import { motion, useReducedMotion, useScroll, useTransform } from 'motion/react';
+import { Link } from 'react-router-dom';
 
 import { BENCHMARKS, getCostStatus } from '../../constants/benchmarks';
 import { useFormSubmit } from '../../hooks/useFormSubmit';
@@ -32,6 +33,12 @@ const STATUS_COLORS: Record<CostStatus, { background: string; text: string; bord
   overpaying: { background: 'bg-accent/15', text: 'text-accent', border: 'border-accent/30' },
 };
 
+const PITCH_PILLARS = [
+  { key: 'quotes', Icon: BadgePercent },
+  { key: 'transparency', Icon: Eye },
+  { key: 'management', Icon: Shield },
+];
+
 function buildComparisons(inputs: CalculatorInputs): ComparisonRow[] {
   const { units } = inputs;
 
@@ -55,46 +62,45 @@ function buildComparisons(inputs: CalculatorInputs): ComparisonRow[] {
 function ComparisonCard({ row, index }: { row: ComparisonRow; index: number }) {
   const { t } = useTranslation();
   const colors = STATUS_COLORS[row.status];
-  const prefersReduced = useReducedMotion();
 
   return (
-    <motion.div
-      initial={prefersReduced ? { opacity: 0 } : { opacity: 0, y: 24 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.1, ease: [0.25, 0.1, 0.25, 1] }}
-      className={`rounded-2xl border ${colors.border} bg-white p-5`}
-    >
-      <div className="flex items-center justify-between mb-3">
-        <h3 className="font-display font-bold text-dark">
-          {t(row.translationKey)}
-        </h3>
-        <span className={`inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full ${colors.background} ${colors.text}`}>
-          {t(`calculator.results.status.${row.status}`)}
-        </span>
-      </div>
-
-      <div className="flex items-end gap-4">
-        <div className="flex-1">
-          <p className="text-sm text-gray-500 mb-1">{t('calculator.results.youPay')}</p>
-          <p className="font-display font-extrabold text-2xl text-dark">
-            {row.userPerUnit.toFixed(0)}&nbsp;&euro; <span className="text-base font-bold text-gray-500">{t('calculator.results.perUnit')}</span>
-          </p>
+    <ScrollReveal delay={index * 0.1}>
+      <motion.div
+        whileHover={{ y: -4 }}
+        transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+        className={`rounded-2xl border ${colors.border} bg-white p-5 hover:shadow-lg transition-shadow duration-300`}
+      >
+        <div className="flex items-center justify-between mb-3">
+          <h3 className="font-display font-bold text-dark">
+            {t(row.translationKey)}
+          </h3>
+          <span className={`inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full ${colors.background} ${colors.text}`}>
+            {t(`calculator.results.status.${row.status}`)}
+          </span>
         </div>
 
-        <div className="flex-1 text-right">
-          <p className="text-sm text-gray-500 mb-1">{t('calculator.results.average')}</p>
-          <p className="font-display font-bold text-lg text-gray-500">
-            {row.benchmarkPerUnit.toFixed(0)}&nbsp;&euro; <span className="text-sm">{t('calculator.results.perUnit')}</span>
-          </p>
-        </div>
-      </div>
+        <div className="flex items-end gap-4">
+          <div className="flex-1">
+            <p className="text-sm text-gray-500 mb-1">{t('calculator.results.youPay')}</p>
+            <p className="font-display font-extrabold text-2xl text-dark">
+              {row.userPerUnit.toFixed(0)}&nbsp;&euro; <span className="text-base font-bold text-gray-500">{t('calculator.results.perUnit')}</span>
+            </p>
+          </div>
 
-      {/* Visual bar comparison */}
-      <div className="mt-3 space-y-1.5">
-        <BarIndicator value={row.userPerUnit} maxValue={Math.max(row.userPerUnit, row.benchmarkPerUnit) * 1.2} color="bg-dark" />
-        <BarIndicator value={row.benchmarkPerUnit} maxValue={Math.max(row.userPerUnit, row.benchmarkPerUnit) * 1.2} color="bg-gray-300" />
-      </div>
-    </motion.div>
+          <div className="flex-1 text-right">
+            <p className="text-sm text-gray-500 mb-1">{t('calculator.results.average')}</p>
+            <p className="font-display font-bold text-lg text-gray-500">
+              {row.benchmarkPerUnit.toFixed(0)}&nbsp;&euro; <span className="text-sm">{t('calculator.results.perUnit')}</span>
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-3 space-y-1.5">
+          <BarIndicator value={row.userPerUnit} maxValue={Math.max(row.userPerUnit, row.benchmarkPerUnit) * 1.2} color="bg-dark" />
+          <BarIndicator value={row.benchmarkPerUnit} maxValue={Math.max(row.userPerUnit, row.benchmarkPerUnit) * 1.2} color="bg-gray-300" />
+        </div>
+      </motion.div>
+    </ScrollReveal>
   );
 }
 
@@ -106,7 +112,8 @@ function BarIndicator({ value, maxValue, color }: { value: number; maxValue: num
     <div className="h-2 w-full rounded-full bg-gray-100 overflow-hidden">
       <motion.div
         initial={prefersReduced ? { width: `${widthPercent}%` } : { width: '0%' }}
-        animate={{ width: `${widthPercent}%` }}
+        whileInView={{ width: `${widthPercent}%` }}
+        viewport={{ once: true, margin: '-40px' }}
         transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
         className={`h-full rounded-full ${color}`}
       />
@@ -114,74 +121,23 @@ function BarIndicator({ value, maxValue, color }: { value: number; maxValue: num
   );
 }
 
-function SummaryCard({ comparisons, inputs }: { comparisons: ComparisonRow[]; inputs: CalculatorInputs }) {
-  const { t } = useTranslation();
-  const prefersReduced = useReducedMotion();
-
-  // User total annual spend (all tracked categories)
-  const userAnnual = (
-    inputs.feePerUnit * inputs.units * 12
-  );
-
-  // Benchmark annual for same number of units
-  const feeAverage = BENCHMARKS.find((benchmark) => benchmark.key === 'fee')?.averagePerUnit ?? 105;
-  const benchmarkAnnual = feeAverage * inputs.units * 12;
-
-  const difference = userAnnual - benchmarkAnnual;
-  const isOverpaying = difference > 0;
-  const hasOverpayingCategories = comparisons.some(
-    (row) => row.status === 'high' || row.status === 'overpaying'
-  );
+function ParallaxBreather() {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start end', 'end start'],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], ['-15px', '15px']);
 
   return (
-    <motion.div
-      initial={prefersReduced ? { opacity: 0 } : { opacity: 0, y: 24 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
-      className="rounded-2xl bg-dark p-6 md:p-8 text-white"
-    >
-      <h3 className="font-display font-bold text-xl mb-4">
-        {t('calculator.results.summary.headline')}
-      </h3>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-        <div className="rounded-xl bg-white/10 p-4">
-          <p className="text-sm text-gray-400 mb-1">{t('calculator.results.summary.yourTotal')}</p>
-          <p className="font-display font-extrabold text-2xl">
-            {userAnnual.toLocaleString()}&nbsp;&euro; <span className="text-sm font-bold text-gray-400">{t('calculator.results.summary.perYear')}</span>
-          </p>
-        </div>
-        <div className="rounded-xl bg-white/10 p-4">
-          <p className="text-sm text-gray-400 mb-1">{t('calculator.results.summary.averageTotal')}</p>
-          <p className="font-display font-bold text-2xl text-gray-300">
-            {benchmarkAnnual.toLocaleString()}&nbsp;&euro; <span className="text-sm font-bold text-gray-400">{t('calculator.results.summary.perYear')}</span>
-          </p>
-        </div>
-      </div>
-
-      {isOverpaying && (
-        <div className="flex items-center gap-3 rounded-xl bg-accent/15 border border-accent/30 p-4 mb-4">
-          <TrendingDown className="w-6 h-6 text-accent shrink-0" />
-          <p className="text-accent-light font-semibold">
-            {t('calculator.results.summary.saving')} <span className="font-extrabold">{Math.abs(difference).toLocaleString()}&nbsp;&euro;</span>{t('calculator.results.summary.perYear')}
-          </p>
-        </div>
-      )}
-
-      <div className="flex items-start gap-3">
-        {hasOverpayingCategories ? (
-          <>
-            <TrendingUp className="w-5 h-5 text-warning mt-0.5 shrink-0" />
-            <p className="text-gray-300">{t('calculator.results.summary.overpaying')}</p>
-          </>
-        ) : (
-          <>
-            <CheckCircle className="w-5 h-5 text-success mt-0.5 shrink-0" />
-            <p className="text-gray-300">{t('calculator.results.summary.onTrack')}</p>
-          </>
-        )}
-      </div>
-    </motion.div>
+    <div ref={ref} className="h-48 md:h-64 lg:h-80 relative overflow-hidden">
+      <motion.img
+        src={`${import.meta.env.BASE_URL}images/balcony-detail.jpg`}
+        alt="Elegant European building facade with balconies"
+        style={{ y }}
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+    </div>
   );
 }
 
@@ -254,6 +210,15 @@ function LeadCaptureForm({ formspreeId }: { formspreeId: string }) {
 export default function CalculatorResults({ inputs, formspreeId, onRecalculate }: CalculatorResultsProps) {
   const { t } = useTranslation();
   const comparisons = buildComparisons(inputs);
+  const hasOverpayingCategories = comparisons.some(
+    (row) => row.status === 'high' || row.status === 'overpaying'
+  );
+
+  const userAnnual = inputs.feePerUnit * inputs.units * 12;
+  const feeAverage = BENCHMARKS.find((benchmark) => benchmark.key === 'fee')?.averagePerUnit ?? 105;
+  const benchmarkAnnual = feeAverage * inputs.units * 12;
+  const difference = userAnnual - benchmarkAnnual;
+  const isOverpaying = difference > 0;
 
   const shareText = encodeURIComponent(
     t('calculator.results.share.text') + ' https://veina.eu/calculadora'
@@ -261,68 +226,188 @@ export default function CalculatorResults({ inputs, formspreeId, onRecalculate }
   const whatsappUrl = `https://wa.me/?text=${shareText}`;
 
   return (
-    <div className="space-y-6">
-      <ScrollReveal>
-        <h2 className="font-display text-2xl sm:text-3xl font-bold text-dark tracking-tight text-center">
-          {t('calculator.results.headline')}
-        </h2>
-      </ScrollReveal>
+    <>
+      {/* Dark hero: results summary + Veina pitch */}
+      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <img
+          src={`${import.meta.env.BASE_URL}images/city-aerial.jpg`}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+          aria-hidden="true"
+        />
+        <div className="absolute inset-0 bg-dark/90" />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {comparisons.map((row, index) => (
-          <ComparisonCard key={row.categoryKey} row={row} index={index} />
-        ))}
-      </div>
+        <div className="relative max-w-5xl mx-auto">
+          {/* Results headline + summary stats */}
+          <ScrollReveal>
+            <div className="text-center mb-10">
+              <span className="inline-block bg-primary/15 text-primary text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
+                {t('calculator.sectionTag')}
+              </span>
+              <h1 className="font-display text-3xl sm:text-4xl font-bold text-white tracking-tight">
+                {t('calculator.results.headline')}
+              </h1>
+            </div>
+          </ScrollReveal>
 
-      <p className="text-xs text-gray-400 text-center">{t('calculator.results.disclaimer')}</p>
+          <ScrollReveal delay={0.1}>
+            <div className="max-w-xl mx-auto mb-16">
+              <div className="bg-dark-light border border-white/10 rounded-2xl p-6 md:p-8">
+                <div className="grid grid-cols-2 gap-4 mb-4">
+                  <div className="text-center">
+                    <p className="text-sm text-gray-400 mb-1">{t('calculator.results.summary.yourTotal')}</p>
+                    <p className="font-display font-extrabold text-3xl text-white">
+                      {userAnnual.toLocaleString()}&nbsp;&euro;
+                    </p>
+                    <p className="text-sm text-gray-400">{t('calculator.results.summary.perYear')}</p>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-sm text-gray-400 mb-1">{t('calculator.results.summary.averageTotal')}</p>
+                    <p className="font-display font-bold text-3xl text-gray-300">
+                      {benchmarkAnnual.toLocaleString()}&nbsp;&euro;
+                    </p>
+                    <p className="text-sm text-gray-400">{t('calculator.results.summary.perYear')}</p>
+                  </div>
+                </div>
 
-      <SummaryCard comparisons={comparisons} inputs={inputs} />
+                {isOverpaying && (
+                  <div className="flex items-center justify-center gap-3 rounded-xl bg-accent/15 border border-accent/30 p-4 mt-4">
+                    <TrendingDown className="w-6 h-6 text-accent shrink-0" />
+                    <p className="text-accent font-semibold">
+                      {t('calculator.results.summary.saving')} <span className="font-extrabold">{Math.abs(difference).toLocaleString()}&nbsp;&euro;</span>{t('calculator.results.summary.perYear')}
+                    </p>
+                  </div>
+                )}
 
-      {/* Lead capture */}
-      <ScrollReveal delay={0.6}>
-        <div className="rounded-2xl bg-surface border border-gray-200 p-6 md:p-8 text-center">
-          <h3 className="font-display font-bold text-xl text-dark mb-2">
-            {t('calculator.results.cta.headline')}
-          </h3>
-          <p className="text-gray-500 mb-6">
-            {t('calculator.results.cta.subheadline')}
-          </p>
-          <div className="max-w-lg mx-auto">
-            <LeadCaptureForm formspreeId={formspreeId} />
+                {!isOverpaying && (
+                  <div className="flex items-center justify-center gap-3 mt-4">
+                    <CheckCircle className="w-5 h-5 text-success shrink-0" />
+                    <p className="text-gray-300">{t('calculator.results.summary.onTrack')}</p>
+                  </div>
+                )}
+              </div>
+            </div>
+          </ScrollReveal>
+
+          {/* Veina pitch */}
+          <ScrollReveal delay={0.2}>
+            <div className="text-center mb-14">
+              <h2 className="font-display text-2xl sm:text-3xl font-bold text-white tracking-tight">
+                {hasOverpayingCategories
+                  ? t('calculator.results.pitch.headline')
+                  : t('calculator.results.pitch.headlineOnTrack')}
+              </h2>
+              <p className="text-gray-400 mt-4 text-lg max-w-2xl mx-auto">
+                {t('calculator.results.pitch.subheadline')}
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {PITCH_PILLARS.map(({ key, Icon }, index) => (
+              <ScrollReveal key={key} delay={index * 0.15 + 0.3} className="h-full">
+                <motion.div
+                  whileHover={{ y: -4 }}
+                  transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+                  className="bg-dark-light border border-white/10 rounded-2xl p-8 hover:border-primary/30 transition-colors duration-300 h-full"
+                >
+                  <div className="bg-primary/15 text-primary rounded-xl p-3 w-fit">
+                    <Icon className="w-6 h-6" />
+                  </div>
+                  <p className="font-display font-bold text-lg mt-5 text-white">
+                    {t(`calculator.results.pitch.${key}.title`)}
+                  </p>
+                  <p className="text-gray-400 text-base mt-2">
+                    {t(`calculator.results.pitch.${key}.description`)}
+                  </p>
+                </motion.div>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <motion.div
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+              className="inline-block"
+            >
+              <Link
+                to="/"
+                className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 font-bold text-white transition-all duration-200 hover:bg-accent-light glow-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 min-h-[44px]"
+              >
+                {t('calculator.results.pitch.learnMore')}
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </motion.div>
           </div>
         </div>
-      </ScrollReveal>
+      </section>
 
-      {/* Actions: share + recalculate */}
-      <ScrollReveal delay={0.7}>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-success px-6 py-3 text-white font-semibold transition-colors duration-200 hover:bg-success-light min-h-[44px]"
-          >
-            <svg
-              className="h-5 w-5"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              aria-hidden="true"
-            >
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-            </svg>
-            {t('calculator.results.share.button')}
-          </a>
+      {/* Category breakdown (light section) */}
+      <section className="bg-surface py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto">
+          <ScrollReveal>
+            <h2 className="font-display text-2xl sm:text-3xl font-bold text-dark tracking-tight text-center mb-10">
+              {t('calculator.results.breakdown.headline')}
+            </h2>
+          </ScrollReveal>
 
-          <button
-            type="button"
-            onClick={onRecalculate}
-            className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-6 py-3 text-dark font-semibold transition-colors duration-200 hover:bg-gray-100 min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            {t('calculator.results.recalculate')}
-          </button>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {comparisons.map((row, index) => (
+              <ComparisonCard key={row.categoryKey} row={row} index={index} />
+            ))}
+          </div>
+
+          <p className="text-xs text-gray-400 text-center mt-6">{t('calculator.results.disclaimer')}</p>
         </div>
-      </ScrollReveal>
-    </div>
+      </section>
+
+      {/* Parallax image breather */}
+      <ParallaxBreather />
+
+      {/* CTA section (dark, FinalCta style) */}
+      <section className="bg-dark hero-grid py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-2xl mx-auto">
+          <ScrollReveal>
+            <div className="text-center mb-10">
+              <h2 className="font-display text-2xl sm:text-3xl font-bold text-white tracking-tight">
+                {t('calculator.results.cta.headline')}
+              </h2>
+              <p className="text-gray-400 mt-4 text-lg">
+                {t('calculator.results.cta.subheadline')}
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12">
+            <LeadCaptureForm formspreeId={formspreeId} />
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-success px-6 py-3 text-white font-semibold transition-colors duration-200 hover:bg-success-light min-h-[44px]"
+            >
+              <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
+              {t('calculator.results.share.button')}
+            </a>
+
+            <button
+              type="button"
+              onClick={onRecalculate}
+              className="inline-flex items-center gap-2 rounded-full border border-white/30 px-6 py-3 text-white font-semibold transition-colors duration-200 hover:bg-white/10 min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              {t('calculator.results.recalculate')}
+            </button>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

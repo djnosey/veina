@@ -191,9 +191,27 @@
         "onTrack": "Tu edificio está en línea con la media de Barcelona.",
         "overpaying": "Tu edificio paga más que la media en algunas categorías."
       },
+      "pitch": {
+        "headline": "Veina puede ayudarte a reducir estos gastos",
+        "headlineOnTrack": "Mantén tus gastos a raya con Veina",
+        "subheadline": "Somos el administrador digital para comunidades de vecinos en Barcelona. Esto es lo que hacemos diferente:",
+        "quotes": {
+          "title": "3 presupuestos para cada trabajo",
+          "description": "Comparas precios de proveedores verificados y eliges tú. Sin comisiones ocultas."
+        },
+        "transparency": {
+          "title": "Cuentas transparentes en tiempo real",
+          "description": "Cada vecino ve a dónde va cada euro. Se acabó el PDF anual que no explica nada."
+        },
+        "management": {
+          "title": "Gestión completa de tu comunidad",
+          "description": "Cubrimos toda la administración: cuotas, morosos, proveedores, votaciones y documentación."
+        },
+        "learnMore": "Descubre cómo funciona"
+      },
       "cta": {
-        "headline": "¿Quieres saber cuánto podría ahorrar tu comunidad?",
-        "subheadline": "Déjanos tu email y te mostraremos un análisis personalizado.",
+        "headline": "Recibe un análisis detallado de tu comunidad",
+        "subheadline": "Te enviaremos un desglose con recomendaciones para reducir los gastos que acabas de comparar.",
         "emailPlaceholder": "Tu email",
         "submitButton": "Quiero mi análisis",
         "submitting": "Enviando…",
@@ -205,6 +223,9 @@
         "text": "Acabo de comparar los gastos de mi comunidad con la media de Barcelona con esta calculadora de Veina. ¡Pruébala tú también!"
       },
       "recalculate": "Volver a calcular",
+      "breakdown": {
+        "headline": "Desglose por categoría"
+      },
       "disclaimer": "Las medias se basan en estudios de mercado de edificios típicos de Barcelona (~20 viviendas con ascensor). Los costes reales varían según el edificio."
     }
   },

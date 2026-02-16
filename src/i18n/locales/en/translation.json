@@ -191,9 +191,27 @@
         "onTrack": "Your building is in line with the Barcelona average.",
         "overpaying": "Your building pays more than average in some categories."
       },
+      "pitch": {
+        "headline": "Veina can help you reduce these costs",
+        "headlineOnTrack": "Keep your costs in check with Veina",
+        "subheadline": "We're the digital administrator for homeowner communities in Barcelona. Here's what we do differently:",
+        "quotes": {
+          "title": "3 quotes for every job",
+          "description": "Compare prices from verified vendors and choose yourself. No hidden commissions."
+        },
+        "transparency": {
+          "title": "Real-time transparent accounts",
+          "description": "Every neighbor sees where every euro goes. No more year-end PDFs that explain nothing."
+        },
+        "management": {
+          "title": "Full community management",
+          "description": "We cover all administration: fees, arrears, vendors, voting, and documentation."
+        },
+        "learnMore": "See how it works"
+      },
       "cta": {
-        "headline": "Want to know how much your community could save?",
-        "subheadline": "Leave your email and we'll send you a personalized analysis.",
+        "headline": "Get a detailed analysis of your community",
+        "subheadline": "We'll send you a breakdown with recommendations to reduce the costs you just compared.",
         "emailPlaceholder": "Your email",
         "submitButton": "Get my analysis",
         "submitting": "Sending\u2026",
@@ -205,6 +223,9 @@
         "text": "I just compared my community's costs to the Barcelona average with this Veina calculator. Try it yourself!"
       },
       "recalculate": "Recalculate",
+      "breakdown": {
+        "headline": "Breakdown by category"
+      },
       "disclaimer": "Averages are based on market research for typical Barcelona buildings (~20 units with elevator). Actual costs vary by building."
     }
   },
