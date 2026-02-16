@@ -135,6 +135,13 @@
     "successMessage": "Done! You're on the list. We'll be in touch soon.",
     "shareText": "I just signed up for Veina, the platform for managing homeowner communities in Barcelona. Join me!"
   },
+  "calculatorPromo": {
+    "sectionTag": "Free calculator",
+    "headline": "How much is your community losing every month?",
+    "subheadline": "Compare your costs to the Barcelona average. 2 minutes.",
+    "cta": "Find out for free",
+    "trust": "No sign-up. Instant results."
+  },
   "calculator": {
     "pageTitle": "What does your building pay?",
     "pageSubtitle": "Compare your community's costs to the Barcelona average. Find out if you're overpaying.",

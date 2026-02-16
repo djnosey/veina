@@ -4,14 +4,13 @@ import Navbar from './components/layout/Navbar';
 import Hero from './components/sections/Hero';
 import Problems from './components/sections/Problems';
 import Solution from './components/sections/Solution';
-import MidCta from './components/sections/MidCta';
+import CalculatorPromo from './components/sections/CalculatorPromo';
 import HowItWorks from './components/sections/HowItWorks';
 import WhoItsFor from './components/sections/WhoItsFor';
 import SocialProof from './components/sections/SocialProof';
 import FinalCta from './components/sections/FinalCta';
 import Footer from './components/layout/Footer';
 
-const HERO_FORMSPREE_ID = 'xojnqboa';
 const CTA_FORMSPREE_ID = 'mgoleqje';
 const base = import.meta.env.BASE_URL;
 
@@ -49,7 +48,7 @@ function App() {
       />
 
       <Solution />
-      <MidCta formspreeId={HERO_FORMSPREE_ID} />
+      <CalculatorPromo />
 
       <ParallaxImage
         src={`${base}images/street-sunset.jpg`}

@@ -135,6 +135,13 @@
     "successMessage": "Fet! T'hem apuntat. T'escriurem aviat.",
     "shareText": "Acabo de registrar-me a Veina, la plataforma per gestionar comunitats de veïns a Barcelona. Apunta't tu també!"
   },
+  "calculatorPromo": {
+    "sectionTag": "Calculadora gratuïta",
+    "headline": "Quants diners perd la teva comunitat cada mes?",
+    "subheadline": "Compara les teves despeses amb la mitjana de Barcelona. 2 minuts.",
+    "cta": "Descobreix-ho gratis",
+    "trust": "Sense registre. Resultat immediat."
+  },
   "calculator": {
     "pageTitle": "Qu\u00e8 paga el teu edifici?",
     "pageSubtitle": "Compara les despeses de la teva comunitat amb la mitjana de Barcelona. Descobreix si est\u00e0s pagant de m\u00e9s.",
