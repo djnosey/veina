@@ -135,8 +135,74 @@
     "successMessage": "Fet! T'hem apuntat. T'escriurem aviat.",
     "shareText": "Acabo de registrar-me a Veina, la plataforma per gestionar comunitats de veïns a Barcelona. Apunta't tu també!"
   },
+  "calculator": {
+    "pageTitle": "Qu\u00e8 paga el teu edifici?",
+    "pageSubtitle": "Compara les despeses de la teva comunitat amb la mitjana de Barcelona. Descobreix si est\u00e0s pagant de m\u00e9s.",
+    "sectionTag": "Calculadora gratu\u00efta",
+    "form": {
+      "unitsLabel": "Nombre d'habitatges",
+      "unitsPlaceholder": "Ex: 20",
+      "feeLabel": "Quota mensual per habitatge (\u20ac)",
+      "feePlaceholder": "Ex: 110",
+      "cleaningLabel": "Neteja mensual total (\u20ac)",
+      "cleaningPlaceholder": "Ex: 400",
+      "elevatorLabel": "Manteniment ascensor mensual (\u20ac)",
+      "elevatorPlaceholder": "Ex: 200",
+      "insuranceLabel": "Asseguran\u00e7a anual (\u20ac)",
+      "insurancePlaceholder": "Ex: 1500",
+      "adminLabel": "Quota administrador mensual (\u20ac)",
+      "adminPlaceholder": "Ex: 150",
+      "neighborhoodLabel": "Barri (opcional)",
+      "neighborhoodPlaceholder": "Ex: Eixample, Gr\u00e0cia, Poblenou\u2026",
+      "submitButton": "Veure comparativa",
+      "requiredError": "Aquest camp \u00e9s obligatori"
+    },
+    "results": {
+      "headline": "Comparativa del teu edifici",
+      "perUnit": "/habitatge/mes",
+      "youPay": "Tu pagues",
+      "average": "Mitjana Barcelona",
+      "categories": {
+        "fee": "Quota comunit\u00e0ria",
+        "cleaning": "Neteja",
+        "elevator": "Ascensor",
+        "insurance": "Asseguran\u00e7a",
+        "admin": "Administrador"
+      },
+      "status": {
+        "good": "Bon preu",
+        "fair": "A la mitjana",
+        "high": "Per sobre de la mitjana",
+        "overpaying": "Pagant de m\u00e9s"
+      },
+      "summary": {
+        "headline": "Resum",
+        "yourTotal": "El teu edifici gasta",
+        "averageTotal": "Edificis similars gasten de mitjana",
+        "perYear": "/any",
+        "saving": "Podries estar estalviant fins a",
+        "onTrack": "El teu edifici est\u00e0 en l\u00ednia amb la mitjana de Barcelona.",
+        "overpaying": "El teu edifici paga m\u00e9s que la mitjana en algunes categories."
+      },
+      "cta": {
+        "headline": "Vols saber quant podria estalviar la teva comunitat?",
+        "subheadline": "Deixa'ns el teu email i t'enviarem una an\u00e0lisi personalitzada.",
+        "emailPlaceholder": "El teu email",
+        "submitButton": "Vull la meva an\u00e0lisi",
+        "submitting": "Enviant\u2026",
+        "successMessage": "Fet! T'enviarem la teva an\u00e0lisi aviat.",
+        "errorMessage": "Alguna cosa ha fallat. Torna-ho a provar."
+      },
+      "share": {
+        "button": "Comparteix amb la teva comunitat",
+        "text": "Acabo de comparar les despeses de la meva comunitat amb la mitjana de Barcelona amb aquesta calculadora de Veina. Prova-la tu tamb\u00e9!"
+      },
+      "recalculate": "Tornar a calcular",
+      "disclaimer": "Les mitjanes es basen en estudis de mercat d'edificis típics de Barcelona (~20 habitatges amb ascensor). Els costos reals varien segons l'edifici."
+    }
+  },
   "footer": {
-    "tagline": "L'administrador digital per a comunitats de veïns a Barcelona.",
+    "tagline": "L'administrador digital per a comunitats de ve\u00efns a Barcelona.",
     "contactTitle": "Contacte",
     "legalTitle": "Legal",
     "privacy": "Privacitat",

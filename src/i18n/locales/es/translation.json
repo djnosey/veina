@@ -135,6 +135,72 @@
     "successMessage": "¡Hecho! Te hemos apuntado. Te escribiremos pronto.",
     "shareText": "Acabo de registrarme en Veina, la plataforma para gestionar comunidades de vecinos en Barcelona. ¡Apúntate tú también!"
   },
+  "calculator": {
+    "pageTitle": "¿Cuánto paga tu edificio?",
+    "pageSubtitle": "Compara los gastos de tu comunidad con la media de Barcelona. Descubre si estás pagando de más.",
+    "sectionTag": "Calculadora gratuita",
+    "form": {
+      "unitsLabel": "Número de viviendas",
+      "unitsPlaceholder": "Ej: 20",
+      "feeLabel": "Cuota mensual por vivienda (€)",
+      "feePlaceholder": "Ej: 110",
+      "cleaningLabel": "Limpieza mensual total (€)",
+      "cleaningPlaceholder": "Ej: 400",
+      "elevatorLabel": "Mantenimiento ascensor mensual (€)",
+      "elevatorPlaceholder": "Ej: 200",
+      "insuranceLabel": "Seguro anual (€)",
+      "insurancePlaceholder": "Ej: 1500",
+      "adminLabel": "Cuota administrador mensual (€)",
+      "adminPlaceholder": "Ej: 150",
+      "neighborhoodLabel": "Barrio (opcional)",
+      "neighborhoodPlaceholder": "Ej: Eixample, Gràcia, Poblenou…",
+      "submitButton": "Ver comparativa",
+      "requiredError": "Este campo es obligatorio"
+    },
+    "results": {
+      "headline": "Comparativa de tu edificio",
+      "perUnit": "/vivienda/mes",
+      "youPay": "Tú pagas",
+      "average": "Media Barcelona",
+      "categories": {
+        "fee": "Cuota comunitaria",
+        "cleaning": "Limpieza",
+        "elevator": "Ascensor",
+        "insurance": "Seguro",
+        "admin": "Administrador"
+      },
+      "status": {
+        "good": "Buen precio",
+        "fair": "En la media",
+        "high": "Por encima de la media",
+        "overpaying": "Pagando de más"
+      },
+      "summary": {
+        "headline": "Resumen",
+        "yourTotal": "Tu edificio gasta",
+        "averageTotal": "Edificios similares gastan de media",
+        "perYear": "/año",
+        "saving": "Podrías estar ahorrando hasta",
+        "onTrack": "Tu edificio está en línea con la media de Barcelona.",
+        "overpaying": "Tu edificio paga más que la media en algunas categorías."
+      },
+      "cta": {
+        "headline": "¿Quieres saber cuánto podría ahorrar tu comunidad?",
+        "subheadline": "Déjanos tu email y te mostraremos un análisis personalizado.",
+        "emailPlaceholder": "Tu email",
+        "submitButton": "Quiero mi análisis",
+        "submitting": "Enviando…",
+        "successMessage": "¡Hecho! Te enviaremos tu análisis pronto.",
+        "errorMessage": "Algo salió mal. Inténtalo de nuevo."
+      },
+      "share": {
+        "button": "Comparte con tu comunidad",
+        "text": "Acabo de comparar los gastos de mi comunidad con la media de Barcelona con esta calculadora de Veina. ¡Pruébala tú también!"
+      },
+      "recalculate": "Volver a calcular",
+      "disclaimer": "Las medias se basan en estudios de mercado de edificios típicos de Barcelona (~20 viviendas con ascensor). Los costes reales varían según el edificio."
+    }
+  },
   "footer": {
     "tagline": "El administrador digital para comunidades de vecinos en Barcelona.",
     "contactTitle": "Contacto",

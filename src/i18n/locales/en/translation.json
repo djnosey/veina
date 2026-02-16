@@ -135,6 +135,72 @@
     "successMessage": "Done! You're on the list. We'll be in touch soon.",
     "shareText": "I just signed up for Veina, the platform for managing homeowner communities in Barcelona. Join me!"
   },
+  "calculator": {
+    "pageTitle": "What does your building pay?",
+    "pageSubtitle": "Compare your community's costs to the Barcelona average. Find out if you're overpaying.",
+    "sectionTag": "Free calculator",
+    "form": {
+      "unitsLabel": "Number of units",
+      "unitsPlaceholder": "E.g.: 20",
+      "feeLabel": "Monthly fee per unit (\u20ac)",
+      "feePlaceholder": "E.g.: 110",
+      "cleaningLabel": "Total monthly cleaning cost (\u20ac)",
+      "cleaningPlaceholder": "E.g.: 400",
+      "elevatorLabel": "Monthly elevator maintenance (\u20ac)",
+      "elevatorPlaceholder": "E.g.: 200",
+      "insuranceLabel": "Annual insurance (\u20ac)",
+      "insurancePlaceholder": "E.g.: 1500",
+      "adminLabel": "Monthly admin fee (\u20ac)",
+      "adminPlaceholder": "E.g.: 150",
+      "neighborhoodLabel": "Neighborhood (optional)",
+      "neighborhoodPlaceholder": "E.g.: Eixample, Gr\u00e0cia, Poblenou\u2026",
+      "submitButton": "See comparison",
+      "requiredError": "This field is required"
+    },
+    "results": {
+      "headline": "Your building's comparison",
+      "perUnit": "/unit/month",
+      "youPay": "You pay",
+      "average": "Barcelona avg.",
+      "categories": {
+        "fee": "Community fee",
+        "cleaning": "Cleaning",
+        "elevator": "Elevator",
+        "insurance": "Insurance",
+        "admin": "Administrator"
+      },
+      "status": {
+        "good": "Good price",
+        "fair": "On average",
+        "high": "Above average",
+        "overpaying": "Overpaying"
+      },
+      "summary": {
+        "headline": "Summary",
+        "yourTotal": "Your building spends",
+        "averageTotal": "Similar buildings average",
+        "perYear": "/year",
+        "saving": "You could be saving up to",
+        "onTrack": "Your building is in line with the Barcelona average.",
+        "overpaying": "Your building pays more than average in some categories."
+      },
+      "cta": {
+        "headline": "Want to know how much your community could save?",
+        "subheadline": "Leave your email and we'll send you a personalized analysis.",
+        "emailPlaceholder": "Your email",
+        "submitButton": "Get my analysis",
+        "submitting": "Sending\u2026",
+        "successMessage": "Done! We'll send your analysis soon.",
+        "errorMessage": "Something went wrong. Please try again."
+      },
+      "share": {
+        "button": "Share with your community",
+        "text": "I just compared my community's costs to the Barcelona average with this Veina calculator. Try it yourself!"
+      },
+      "recalculate": "Recalculate",
+      "disclaimer": "Averages are based on market research for typical Barcelona buildings (~20 units with elevator). Actual costs vary by building."
+    }
+  },
   "footer": {
     "tagline": "The digital administrator for homeowner communities in Barcelona.",
     "contactTitle": "Contact",
