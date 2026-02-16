@@ -189,11 +189,29 @@
         "perYear": "/any",
         "saving": "Podries estar estalviant fins a",
         "onTrack": "El teu edifici est\u00e0 en l\u00ednia amb la mitjana de Barcelona.",
-        "overpaying": "El teu edifici paga m\u00e9s que la mitjana en algunes categories."
+        "overpaying": "El teu edifici paga més que la mitjana en algunes categories."
+      },
+      "pitch": {
+        "headline": "Veina pot ajudar-te a reduir aquestes despeses",
+        "headlineOnTrack": "Mantén les teves despeses a ratlla amb Veina",
+        "subheadline": "Som l'administrador digital per a comunitats de veïns a Barcelona. Això és el que fem diferent:",
+        "quotes": {
+          "title": "3 pressupostos per a cada feina",
+          "description": "Compares preus de proveïdors verificats i tries tu. Sense comissions ocultes."
+        },
+        "transparency": {
+          "title": "Comptes transparents en temps real",
+          "description": "Cada veí veu on va cada euro. S'ha acabat el PDF anual que no explica res."
+        },
+        "management": {
+          "title": "Gestió completa de la teva comunitat",
+          "description": "Cobrim tota l'administració: quotes, morosos, proveïdors, votacions i documentació."
+        },
+        "learnMore": "Descobreix com funciona"
       },
       "cta": {
-        "headline": "Vols saber quant podria estalviar la teva comunitat?",
-        "subheadline": "Deixa'ns el teu email i t'enviarem una an\u00e0lisi personalitzada.",
+        "headline": "Rep una anàlisi detallada de la teva comunitat",
+        "subheadline": "T'enviarem un desglossament amb recomanacions per reduir les despeses que acabes de comparar.",
         "emailPlaceholder": "El teu email",
         "submitButton": "Vull la meva an\u00e0lisi",
         "submitting": "Enviant\u2026",
@@ -205,6 +223,9 @@
         "text": "Acabo de comparar les despeses de la meva comunitat amb la mitjana de Barcelona amb aquesta calculadora de Veina. Prova-la tu tamb\u00e9!"
       },
       "recalculate": "Tornar a calcular",
+      "breakdown": {
+        "headline": "Desglossament per categoria"
+      },
       "disclaimer": "Les mitjanes es basen en estudis de mercat d'edificis típics de Barcelona (~20 habitatges amb ascensor). Els costos reals varien segons l'edifici."
     }
   },
