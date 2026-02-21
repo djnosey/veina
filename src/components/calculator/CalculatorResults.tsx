@@ -214,9 +214,15 @@ export default function CalculatorResults({ inputs, formspreeId, onRecalculate }
     (row) => row.status === 'high' || row.status === 'overpaying'
   );
 
-  const userAnnual = inputs.feePerUnit * inputs.units * 12;
-  const feeAverage = BENCHMARKS.find((benchmark) => benchmark.key === 'fee')?.averagePerUnit ?? 105;
-  const benchmarkAnnual = feeAverage * inputs.units * 12;
+  const userMonthlyPerUnit =
+    inputs.feePerUnit +
+    inputs.cleaningTotal / inputs.units +
+    inputs.elevatorTotal / inputs.units +
+    inputs.insuranceAnnual / 12 / inputs.units +
+    inputs.adminTotal / inputs.units;
+  const benchmarkMonthlyPerUnit = BENCHMARKS.reduce((sum, b) => sum + b.averagePerUnit, 0);
+  const userAnnual = Math.round(userMonthlyPerUnit * inputs.units * 12);
+  const benchmarkAnnual = Math.round(benchmarkMonthlyPerUnit * inputs.units * 12);
   const difference = userAnnual - benchmarkAnnual;
   const isOverpaying = difference > 0;
 
