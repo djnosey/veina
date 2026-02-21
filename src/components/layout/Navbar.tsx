@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation, useNavigate, Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import Button from '../ui/Button';
 import LanguageSwitcher from '../ui/LanguageSwitcher';
@@ -8,6 +8,7 @@ import LanguageSwitcher from '../ui/LanguageSwitcher';
 export default function Navbar() {
   const { t } = useTranslation();
   const location = useLocation();
+  const navigate = useNavigate();
   const isHomePage = location.pathname === '/';
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -31,7 +32,11 @@ export default function Navbar() {
     if (isHomePage) {
       document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' });
     } else {
-      window.location.href = '/#final-cta';
+      navigate('/');
+      // Wait for the home page to render, then scroll to the CTA
+      requestAnimationFrame(() => {
+        document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' });
+      });
     }
   };
 

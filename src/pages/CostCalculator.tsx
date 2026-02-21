@@ -10,7 +10,7 @@ import CalculatorResults from '../components/calculator/CalculatorResults';
 
 import type { CalculatorInputs } from '../components/calculator/CalculatorForm';
 
-const WAITLIST_FORMSPREE_ID = 'xojnqboa';
+const WAITLIST_FORMSPREE_ID = import.meta.env.VITE_FORMSPREE_CALCULATOR ?? 'xojnqboa';
 
 export default function CostCalculator() {
   const { t } = useTranslation();
